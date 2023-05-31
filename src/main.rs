@@ -1,4 +1,5 @@
-mod rock_paper_scissors;
+// mod rock_paper_scissors;
+mod computer_guess;
 mod supdawg;
 use std::io;
 
@@ -8,6 +9,7 @@ fn main() {
         println!("\nPlease choose an option: ");
         println!("1 - Rock papers scisors");
         println!("2 - Supdawg");
+        println!("3 - Computer tries guessing");
         println!("q - Quit");
 
         io::stdin()
@@ -37,11 +39,15 @@ fn main() {
         match option {
             1 => {
                 println!("Loading game: rock paper scissors");
-                rock_paper_scissors::play();
+                // rock_paper_scissors::play();
             }
-            2 =>  {
+            2 => {
                 println!("Loading game: supdawg");
                 supdawg::play();
+            }
+            3 => {
+                println!("Loading game: computer guess");
+                computer_guess::play();
             }
             _ => println!("WIP - Not yet implemented"),
         }
