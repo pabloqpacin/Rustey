@@ -1,7 +1,9 @@
 // mod rock_paper_scissors;
-mod computer_guess;
+mod computer_tries_guessing;
 mod supdawg;
 use std::io;
+use std::thread;
+use std::time::Duration;
 
 fn main() {
     loop {
@@ -34,21 +36,12 @@ fn main() {
                 continue;
             }
         };
-        println!("You chose option {}", option);
-
+        println!("Loading game {}...", option);
+        thread::sleep(Duration::from_secs(1));
         match option {
-            1 => {
-                println!("Loading game: rock paper scissors");
-                // rock_paper_scissors::play();
-            }
-            2 => {
-                println!("Loading game: supdawg");
-                supdawg::play();
-            }
-            3 => {
-                println!("Loading game: computer guess");
-                computer_guess::play();
-            }
+            // 1 => rock_paper_scissors::play();
+            2 => {supdawg::play();}
+            3 => {computer_tries_guessing::play();}
             _ => println!("WIP - Not yet implemented"),
         }
     }

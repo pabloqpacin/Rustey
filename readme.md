@@ -11,3 +11,5 @@ Basically a rework of some [Terminal Games](https://github.com/pabloqpacin/SLIT/
 - ...
 - start computer_tries_guessing: looking good, main game loop good, now just the logic left
   - WIP: MEMORY MANAGEMENT 
+- complete CTG. I should have a review because I'm not sure about the datatypes/pointers (boxes or not)
+  - also input 0 for `high_s` panics!
