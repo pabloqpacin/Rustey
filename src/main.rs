@@ -1,5 +1,8 @@
 // mod rock_paper_scissors;
+// mod computer_tries_guessing_v2;
 mod computer_tries_guessing;
+// mod hangman;
+mod rpg_cli;
 mod supdawg;
 use std::io;
 use std::thread;
@@ -12,6 +15,8 @@ fn main() {
         println!("1 - Rock papers scisors");
         println!("2 - Supdawg");
         println!("3 - Computer tries guessing");
+        println!("4 - Hangman");
+        println!("5 - RPG-CLI");
         println!("q - Quit");
 
         io::stdin()
@@ -42,6 +47,8 @@ fn main() {
             // 1 => rock_paper_scissors::play();
             2 => {supdawg::play();}
             3 => {computer_tries_guessing::play();}
+            // 4 => {hangman::play();}
+            5 => {rpg_cli::play();}
             _ => println!("WIP - Not yet implemented"),
         }
     }

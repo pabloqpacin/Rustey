@@ -1,0 +1,3 @@
+- debug datatypes, references & permissions
+- use ncurses
+- use struct and method implementations
