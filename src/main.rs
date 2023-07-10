@@ -2,7 +2,7 @@
 // mod computer_tries_guessing_v2;
 mod computer_tries_guessing;
 // mod hangman;
-mod rpg_cli;
+// mod rpg_cli;
 mod supdawg;
 use std::io;
 use std::thread;
@@ -48,7 +48,7 @@ fn main() {
             2 => {supdawg::play();}
             3 => {computer_tries_guessing::play();}
             // 4 => {hangman::play();}
-            5 => {rpg_cli::play();}
+            // 5 => {rpg_cli::play();}
             _ => println!("WIP - Not yet implemented"),
         }
     }
